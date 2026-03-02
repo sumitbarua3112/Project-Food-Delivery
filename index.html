@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Express - Food Delivery</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                Foodie Express
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menus">Menus</a></li>
+                <li><a href="#foods">Foods</a></li>
+                <li><a href="#famous">Famous</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#discount">Discount</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn login-btn" id="nav-login-btn">Login</button>
+                <button class="btn signup-btn" id="nav-signup-btn">Sign Up</button>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner" id="home">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Delicious Food Delivered to Your Door</h1>
+                <p>Order your favorite meals from top restaurants. Fast delivery, fresh food, and great prices!</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Search for food or restaurant...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                <div class="banner-stats">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Restaurants</p>
+                    </div>
+                    <div class="stat">
+                        <h3>2000+</h3>
+                        <p>Food Items</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50,000+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-image">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Delicious Food">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menus Section -->
+    <section class="menus" id="menus">
+        <div class="container">
+            <h2 class="section-title">Our Restaurant Menus</h2>
+            <p class="section-subtitle">Click on any menu to explore food items</p>
+            <div class="menus-grid">
+                
+
+                <div class="menu-card" onclick="goToMenuDashboard('bbqs-menu')">
+                    <img src= "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/79619/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", alt="Burger Menu">
+                        <!-- "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/79619/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", -->
+                    <div class="menu-info">
+                        <h3> Bbqs Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('best-food-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/106027/wood-fired-pizzas-best-seller-4-pack.1653bb05922ba153ac178f8365d27f6d.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> best food Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('bread-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132332/artisanal-bread-choose-your-own-3-pack.c64d8dc0584457116b91a24f43cd861c.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> bread Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('burger-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/137148/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> Burger Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('chocolate-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/108595/chocolate-ganache-fudge-brownie.fb14f000098178f7520f89e167756deb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> chocolates Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('desserts-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132029/german-chocolate-killer-brownie-tin-pack.5ebc34160f28767a9d94c4da2e04c4b9.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> desserts Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('drinks-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/108725/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> drinks Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('fried-chicken-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/134235/complete-fried-chicken-dinner-for-4.aeabf841c124b9cc2fb0166f27790999.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> fried-chicken Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('ice-cream-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/95947/ice-cream-choose-your-own-6-pints.ae6a75a1b5d518d9cbf2982ebc504f4c.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> ice-cream Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('pizzas-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/89781/choose-your-own-thin-crust-pizza-4-pack.b928a2008eab50c65dc87e59b5952190.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> pizzas Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('porks-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/134603/roast-pork-sandwich-kit-for-4.28babe63f6db57759b8e03d7a19a78eb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> porks Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('sandwiches-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/129490/the-gothamist-prosciutto-burrata-sandwich-kit-4-pack.4238b1e274d50b6e09d0b488aebe64bd.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> sandwiches Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('sausages-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/101114/original-texas-smoked-sausage.a298e25643030c5500e225c7996fb153.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1", alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> sausages Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="goToMenuDashboard('steaks-menu')">
+                    <img src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/96226/california-reserve-filet-mignon-steaks-gift-box.bf226e317aad85f47897ae7e325f790d.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",alt="Burger Menu">
+                    <div class="menu-info">
+                        <h3> steaks Menu</h3>
+                        <p>20+ delicious burger options</p>
+                        <button class="view-menu-btn">View Menu</button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Images Section -->
+    <section class="food-images" id="foods">
+        <div class="container">
+            <h2 class="section-title">Popular Food Categories</h2>
+            <div class="food-grid">
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger">
+                    <div class="food-info">
+                        <h3>Burgers</h3>
+                        <p>50+ items</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza">
+                    <div class="food-info">
+                        <h3>Pizza</h3>
+                        <p>80+ items</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Biryani">
+                    <div class="food-info">
+                        <h3>Biryani</h3>
+                        <p>30+ items</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Salad">
+                    <div class="food-info">
+                        <h3>Salads</h3>
+                        <p>40+ items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Famous Food Section -->
+    <section class="famous-food" id="famous">
+        <div class="container">
+            <h2 class="section-title">Our Famous Dishes</h2>
+            <div class="famous-grid">
+                <div class="famous-card">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Special Burger">
+                    <div class="famous-info">
+                        <h3>Mega Burger</h3>
+                        <p>Double patty with special sauce</p>
+                        <div class="price">$8.99</div>
+                        <button class="add-to-cart" data-id="1" data-name="Mega Burger" data-price="8.99" data-img="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="famous-card">
+                    <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Special Pizza">
+                    <div class="famous-info">
+                        <h3>Cheese Pizza</h3>
+                        <p>Extra cheese with fresh toppings</p>
+                        <div class="price">$12.99</div>
+                        <button class="add-to-cart" data-id="2" data-name="Cheese Pizza" data-price="12.99" data-img="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="famous-card">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Special Biryani">
+                    <div class="famous-info">
+                        <h3>Chicken Biryani</h3>
+                        <p>Authentic recipe with spices</p>
+                        <div class="price">$10.99</div>
+                        <button class="add-to-cart" data-id="3" data-name="Chicken Biryani" data-price="10.99" data-img="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"The food arrived hot and fresh. Best burger I've had in a long time!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Customer">
+                        <div>
+                            <h4>Mike Chen</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Fast delivery and amazing pizza. Will definitely order again!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Customer">
+                        <div>
+                            <h4>Emma Davis</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Great service and delicious food. The biryani was perfect!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discount Section -->
+    <section class="discount" id="discount">
+        <div class="container">
+            <h2 class="section-title">This Month's Special Offers</h2>
+            <div class="discount-grid">
+                <div class="discount-card">
+                    <div class="discount-badge">30% OFF</div>
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger Deal">
+                    <div class="discount-info">
+                        <h3>Burger Combo</h3>
+                        <p>Burger + Fries + Drink</p>
+                        <div class="price">
+                            <span class="old-price">$15.99</span>
+                            <span class="new-price">$11.99</span>
+                        </div>
+                        <button class="add-to-cart" data-id="4" data-name="Burger Combo" data-price="11.99" data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            <i class="fas fa-cart-plus"></i> Order Now
+                        </button>
+                    </div>
+                </div>
+                <div class="discount-card">
+                    <div class="discount-badge">25% OFF</div>
+                    <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza Deal">
+                    <div class="discount-info">
+                        <h3>Family Pizza</h3>
+                        <p>Large pizza with 4 toppings</p>
+                        <div class="price">
+                            <span class="old-price">$24.99</span>
+                            <span class="new-price">$18.99</span>
+                        </div>
+                        <button class="add-to-cart" data-id="5" data-name="Family Pizza" data-price="18.99" data-img="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            <i class="fas fa-cart-plus"></i> Order Now
+                        </button>
+                    </div>
+                </div>
+                <div class="discount-card">
+                    <div class="discount-badge">20% OFF</div>
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Biryani Deal">
+                    <div class="discount-info">
+                        <h3>Biryani Meal</h3>
+                        <p>Biryani with salad and drink</p>
+                        <div class="price">
+                            <span class="old-price">$14.99</span>
+                            <span class="new-price">$11.99</span>
+                        </div>
+                        <button class="add-to-cart" data-id="6" data-name="Biryani Meal" data-price="11.99" data-img="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            <i class="fas fa-cart-plus"></i> Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does delivery take?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Delivery usually takes 30-45 minutes depending on your location and traffic conditions.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What payment methods do you accept?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We accept credit cards, debit cards, PayPal, and cash on delivery.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I cancel my order?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        You can cancel your order within 5 minutes of placing it. After that, we cannot guarantee cancellation.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you have vegetarian options?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We have a wide variety of vegetarian and vegan options available.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Food Street, City, Country</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 234 567 8900</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@foodieexpress.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Mon-Sun: 9:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" id="contactName" placeholder="Your Name" required>
+                    <input type="email" id="contactEmail" placeholder="Your Email" required>
+                    <input type="text" id="contactSubject" placeholder="Subject" required>
+                    <textarea id="contactMessage" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Foodie Express</h3>
+                    <p>Delivering happiness to your doorstep since 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menus">Menus</a></li>
+                        <li><a href="#foods">Foods</a></li>
+                        <li><a href="#famous">Famous</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Food Delivery</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Party Orders</a></li>
+                        <li><a href="#">Corporate Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates and offers</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Foodie Express. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Foodie Express</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn-login">Login</button>
+                <p class="register-link">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Register for Foodie Express</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">Phone Number</label>
+                    <input type="tel" id="registerPhone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirm Password</label>
+                    <input type="password" id="registerConfirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="btn-register">Register</button>
+                <p class="login-link">Already have an account? <a href="#" id="showLogin">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added here by JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+        </div>
+    </div>
+    
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span id="notification-text"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
